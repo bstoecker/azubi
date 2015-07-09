@@ -9,11 +9,26 @@ class BikesController < ApplicationController
           type: 'xdr'
         ),
         type: 'Mountain Bike'),
-      OpenStruct.new(color: :blue, gears: 0, type: 'BMX')
+      OpenStruct.new(
+        color: :blue,
+        gears: OpenStruct.new(
+          number_of_gears: 0,
+          producer: nil,
+          type: nil),
+        type: 'BMX')
     ]
   end
 
   def show
-    @bike = OpenStruct.new(color: :red, gears: 21, type: 'Mountain Bike', id: 1)
+    @bike = OpenStruct.new(
+      color: :red,
+      gears: OpenStruct.new(
+        number_of_gears: 21,
+        producer: "Shimano",
+        type: 'xdr'
+      ),
+      type: 'Mountain Bike',
+      id: 1
+    )
   end
 end
