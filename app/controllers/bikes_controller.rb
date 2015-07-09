@@ -8,14 +8,16 @@ class BikesController < ApplicationController
           producer: "Shimano",
           type: 'xdr'
         ),
-        type: 'Mountain Bike'),
+        type: 'Mountain Bike'
+      ),
       OpenStruct.new(
         color: :blue,
         gears: OpenStruct.new(
           number_of_gears: 0,
           producer: nil,
           type: nil),
-        type: 'BMX')
+        type: 'BMX'
+      )
     ]
   end
 
